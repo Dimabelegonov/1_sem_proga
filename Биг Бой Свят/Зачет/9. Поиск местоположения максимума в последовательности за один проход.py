@@ -10,3 +10,5 @@ def func(arr):
   return num
 
 print(func(input().split()))
+
+"Временная сложность алгоритма - O(n)"
