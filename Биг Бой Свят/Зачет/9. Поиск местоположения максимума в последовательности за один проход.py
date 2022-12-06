@@ -3,6 +3,10 @@ def func(arr):
   for i in range(1,len(arr)):
     if int(arr[i])>mx:
       mx=int(arr[i])
-  return mx
+      num=[]
+      num.append(i)
+    elif int(arr[i])==mx:
+      num.append(i)
+  return num
 
 print(func(input().split()))
