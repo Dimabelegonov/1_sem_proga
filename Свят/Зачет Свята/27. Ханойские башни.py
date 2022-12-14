@@ -10,3 +10,7 @@ def hanoi(i, j, n):
 
 i, j, n = int(input()), int(input()), int(input())
 hanoi(i, j, n)
+
+"""
+Временная сложность алгоритма - O(2^n)
+"""
