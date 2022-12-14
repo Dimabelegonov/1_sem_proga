@@ -5,10 +5,10 @@
 """
 
 data = list(map(int, input().split()))
-for i in range(len(data) - 1):
-    for j in range(len(data) - i - 1):
-        if data[j] > data[j + 1]:
-            data[j], data[j + 1] = data[j + 1], data[j]
-print(data)
+for i in range(len(data)):
+    for j in range(1,len(data) - i):
+        if data[j-1] > data[j]:
+            data[j-1], data[j] = data[j], data[j-1]
+        print(data)
 
 "Временная сложность алгоритма - O(n**2)"
