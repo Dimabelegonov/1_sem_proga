@@ -11,12 +11,8 @@
 """
 
 data = list(map(int, input().split()))
-for i in range(len(data) - 1):
-    min_el = 10 ** 9
-    for k in range(i, len(data)):
-        if min_el > data[k]:
-            min_el = data[k]
-
-    for j in range(i + 1, len(data)):
-        if data[j] == min_el:
-            data[i], data[j] = data[j], data[i]
+for i in range(len(data)-1):
+  for j in range(i+1,len(data)):
+    if data[j]<data[i]:
+      data[i],data[j]=data[j],data[i]
+  print(data)
