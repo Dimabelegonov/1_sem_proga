@@ -10,7 +10,6 @@
 Сортировка выбором является неустойчивой.
 """
 
-
 data = list(map(int, input().split()))
 for i in range(len(data) - 1):
     min_el = 10 ** 9
