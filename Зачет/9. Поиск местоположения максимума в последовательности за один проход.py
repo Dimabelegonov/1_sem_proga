@@ -1,15 +1,16 @@
 def func(arr):
-    mx = int(arr[0])
+    mx = arr[0]
     for i in range(1, len(arr)):
-        if int(arr[i]) > mx:
-            mx = int(arr[i])
+        if arr[i] > mx:
+            mx = arr[i]
             num = []
             num.append(i)
-        elif int(arr[i]) == mx:
+        elif arr[i] == mx:
             num.append(i)
     return num
 
+data = list(map(int, input().split()))
+print(func(data))
 
-print(func(input().split()))
 
 "Временная сложность алгоритма - O(n)"
