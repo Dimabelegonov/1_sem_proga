@@ -7,10 +7,9 @@ i элементов. Пусть уже первые i−1 элементов о
 Эта сортировка – устойчивая, время работы – O(n**2). ?????
 """
 data = list(map(int, input().split()))
-
 for i in range(1, len(data)):
     j = i
-    while j > 0 and data[j - 1] > data[j]:
+    while j > 0 and data[j] < data[j-1]:
         data[j], data[j - 1] = data[j - 1], data[j]
         j -= 1
     print(data)

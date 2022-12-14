@@ -11,8 +11,8 @@
 """
 
 data = list(map(int, input().split()))
-for i in range(len(data)-1):
-  for j in range(i+1,len(data)):
-    if data[j]<data[i]:
-      data[i],data[j]=data[j],data[i]
-  print(data)
+for i in range(len(data) - 1):
+    for j in range(i + 1, len(data)):
+        if data[j] < data[i]:
+            data[i], data[j] = data[j], data[i]
+    print(data)
