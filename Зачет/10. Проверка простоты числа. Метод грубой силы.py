@@ -1,6 +1,5 @@
 "Метод грубой силы - Brute force"
 
-
 def bf(n):
     d = 2
     while n % d != 0:
@@ -12,8 +11,8 @@ print(bf(int(input())))
 
 "Временная сложность алгоритма - O(n)"
 
-"Быстрый способ"
 
+"Быстрый способ"
 
 def func(n):
     for i in range(2, int(n ** 0.5) + 1):
