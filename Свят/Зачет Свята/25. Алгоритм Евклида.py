@@ -1,21 +1,24 @@
 """
 НОД
 """
-def func(a,b):
-  return a if b==0 else func(b,a%b)
 
-a,b=int(input()),int(input())
-print(func(a,b))
+def func(a, b):
+    return a if b == 0 else func(b, a % b)
+
+
+a, b = int(input()), int(input())
+print(func(a, b))
 
 """
 НОК
 """
 
-def func(a,b):
-  return a if b==0 else func(b,a%b)
+def func(a, b):
+    return a if b == 0 else func(b, a % b)
 
-a,b=int(input()),int(input())
-print(int(1/(func(a,b))*a*b))
+
+a, b = int(input()), int(input())
+print(int(1 / (func(a, b)) * a * b))
 
 """
 Нам даны два числа a и b. Пусть d - их НОД => a%d==0, b%d==0
