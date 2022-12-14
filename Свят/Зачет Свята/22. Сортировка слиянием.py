@@ -4,10 +4,10 @@ def merge(l, r):
     while i < len(l) and j < len(r):
         if l[i] < r[j]:
             result.append(l[i])
-            i = i + 1
-        elif r[j] < l[i]:
+            i += 1
+        else:
             result.append(r[j])
-            j = j + 1
+            j += 1
     while i < len(l):
         result.append(l[i])
         i += 1
