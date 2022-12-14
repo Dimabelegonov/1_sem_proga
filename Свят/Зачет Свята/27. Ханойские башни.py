@@ -9,4 +9,3 @@ def hanoi(i,j,n):
 
 i,j,n=int(input()),int(input()),int(input())
 hanoi(i,j,n)
-1
