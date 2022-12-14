@@ -24,14 +24,14 @@ def check(a):
         if a[i] != "+" and a[i] != "*":
             cache.append(a[i])
         if a[i] == "*":
-            b = ve(cache[-2], cache[-1])
-            cache.pop(-1)
-            cache.pop(-1)
+            s=cache.pop()
+            v=cache.pop()
+            b = ve(v, s)
             cache.append(b)
         if a[i] == "+":
-            b = su(cache[-2], cache[-1])
-            cache.pop(-1)
-            cache.pop(-1)
+            s=cache.pop()
+            v=cache.pop()
+            b = su(s, v)
             cache.append(b)
     if a=="1,2,3 4,5,6 +".split():
       print(*cache)
