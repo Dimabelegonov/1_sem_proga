@@ -11,7 +11,6 @@ data = []                           # Массив простых чисел
 Erat = [True for i in range(N)]
 Erat[0] = Erat[1] = False
 for i in range(2, N):
-    print(i)
     if Erat[i]:
         data.append(i)
         for k in range(2 * i, N, i):
