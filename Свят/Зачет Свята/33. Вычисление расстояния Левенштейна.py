@@ -3,6 +3,7 @@
 удаления одного символа и замены одного символа на другой, необходимых для превращения одной строки в другую.
 """
 
+
 def func(a, b):
     data = [[i + j if i * j == 0 else 0 for i in range(len(a) + 1)] for j in range(len(b) + 1)]
     for j in range(1, len(b) + 1):
