@@ -1,3 +1,4 @@
+#ДОДЕЛАТЬ!!!
 def func(a):
   if len(a)<=1:
     return a
