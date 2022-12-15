@@ -1,17 +1,18 @@
-def func(n):
-    length = len(str(max(n)))
-    A = [list() for _ in range(10)]
-    for i in range(length):
-        for x in n:
-            A[x // 10 ** i % 10].append(x)
-        n.clear()
-        for l in A:
-            for x in l:
-                n.append(x)
-            l.clear()
-    return n
+def radix_sort(arr):
+    max_len = len(str(max(arr)))
+    data = [[] for i in range(11)]
+    for i in range(max_len):
+        for el in arr:
+            data[(el // 10 ** i) % 10].append(el)
 
-data = list(map(int, input().split()))
-print(func(data))
+        arr.clear()
 
-"Временная сложность алгоритма - O(n*m), гду m- кол-во рарзядов"
+        for el in data:
+            arr += el
+            el.clear()
+
+    return arr
+
+
+print(radix_sort([5, 3, 10, 4, 2, 1]))
+

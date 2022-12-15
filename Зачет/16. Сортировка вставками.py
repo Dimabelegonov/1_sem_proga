@@ -6,14 +6,16 @@ i элементов. Пусть уже первые i−1 элементов о
 Будем просто пытаться обменивать его местами с соседом слева, если этот сосед больше нового элемента.
 Эта сортировка – устойчивая, время работы – O(n**2).
 """
-data = list(map(int, input().split()))
 
-i = 0
-while i < len(data) - 1:
-    j = i + 1
-    while j > 0 and data[j] < data[j - 1]:
-        data[j], data[j - 1] = data[j - 1], data[j]
-        j -= 1
-        print(*data)
 
-    i += 1
+def insertion_sort(arr):
+    for i in range(len(arr)):
+        j = i
+        while j > 0 and arr[j - 1] > arr[j]:
+            arr[j - 1], arr[j] = arr[j], arr[j - 1]
+            j -= 1
+
+    return arr
+
+
+print(insertion_sort([5, 2, 3, 4, 1]))

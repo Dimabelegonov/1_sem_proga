@@ -4,11 +4,17 @@
 оказывается больше последующего.
 """
 
-data = list(map(int, input().split()))
-for i in range(len(data)):
-    for j in range(1,len(data) - i):
-        if data[j-1] > data[j]:
-            data[j-1], data[j] = data[j], data[j-1]
-        print(data)
+
+def bubble_sort(arr):
+    for i in range(len(arr)):
+        for j in range(1, len(arr)):
+            if arr[j] < arr[j - 1]:
+                arr[j], arr[j - 1] = arr[j - 1], arr[j]
+
+    return arr
+
+
+print(bubble_sort([4, 3, 2, 5, 6, 1, 2]))
+
 
 "Временная сложность алгоритма - O(n**2)"

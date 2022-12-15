@@ -1,11 +1,22 @@
-data = list(map(int, input().split()))
-a=[0]*(max(data)+1)
-for x in data:
-  a[x]+=1
-data.clear()
-for i in range(len(a)):
-  for x in range(a[i]):
-    data.append(i)
-print(data)
+"""
+Это простейший вариант алгоритма. Создать вспомогательный массив C[0..k], состоящий из нулей,
+затем последовательно прочитать элементы входного массива A, для каждого A[i] увеличить C[A[i]] на единицу.
+Теперь достаточно пройти по массиву C, для каждого элемента од 0 до k в массив A последовательно
+записать число j C[j] раз. Сложность O(n^2)
+"""
 
-"Временная сложность алгоритма - O(?), гду m- кол-во рарзядов"
+
+def counting_sort(arr):
+    data = [0] * (max(arr) + 1)
+    for i in range(len(arr)):
+        data[arr[i]] += 1
+
+    ans_arr = []
+    for i in range(len(data)):
+        for j in range(data[i]):
+            ans_arr.append(i)
+
+    return ans_arr
+
+
+print(counting_sort([10, 9, 8, 7, 5, 2, 1, 3, 4]))

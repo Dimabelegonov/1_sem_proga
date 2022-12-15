@@ -10,9 +10,15 @@
 Сортировка выбором является неустойчивой.
 """
 
-data = list(map(int, input().split()))
-for i in range(len(data) - 1):
-    for j in range(i + 1, len(data)):
-        if data[j] < data[i]:
-            data[i], data[j] = data[j], data[i]
-    print(data)
+
+def selection_sort(arr):
+    for i in range(len(arr) - 1):
+        for j in range(i + 1, len(arr)):
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
+
+    return arr
+
+
+print(selection_sort([1, 4, 6, 7, 4, 3, 2, 1]))
+
