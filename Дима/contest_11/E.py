@@ -37,3 +37,6 @@ def get_str(dp, s2):
             j -= 1
 
     return ans[::-1]
+
+
+print(lis([3, 4, 5, 7, 6, 4, 2, 1, 5, 6]))
