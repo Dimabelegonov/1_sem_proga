@@ -2,14 +2,17 @@
 Рекурсия
 """
 
+
 def fib(n):
     return 1 if n < 2 else fib(n - 2) + fib(n - 1)
 
-print(fib(int(input())))
+
+print(fib(6))
 
 """
 Динамическое программирование
 """
+
 
 def fib(n):
     a = [1] * 2
@@ -17,4 +20,5 @@ def fib(n):
         a.append(a[i - 2] + a[i - 1])
     return a[n]
 
-print(fib(int(input())))
+
+print(fib(6))

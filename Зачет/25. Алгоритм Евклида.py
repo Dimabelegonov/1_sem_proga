@@ -2,23 +2,23 @@
 НОД
 """
 
-def func(a, b):
-    return a if b == 0 else func(b, a % b)
+
+def NOD(a, b):
+    return a if b == 0 else NOD(b, a % b)
 
 
-a, b = int(input()), int(input())
-print(func(a, b))
+print(NOD(9, 27))
 
 """
 НОК
 """
 
-def func(a, b):
-    return a if b == 0 else func(b, a % b)
+
+def NOK(a, b):
+    return a * b // NOD(a, b)
 
 
-a, b = int(input()), int(input())
-print(int(1 / (func(a, b)) * a * b))
+print(NOK(5, 120))
 
 """
 Нам даны два числа a и b. Пусть d - их НОД => a%d==0, b%d==0
