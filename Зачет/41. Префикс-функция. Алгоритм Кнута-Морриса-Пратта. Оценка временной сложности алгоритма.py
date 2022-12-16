@@ -20,14 +20,14 @@ def z_func(s):
 
     for i in range(1, len(s)):
         if i <= r:
-            z[i] = min(r - i + 1, z[i - l])
+            z[i] = min(r - i, z[i - l])
 
         while i + z[i] < len(s) and s[z[i]] == s[z[i] + i]:
             z[i] += 1
 
         if i + z[i] > r:
             l = i
-            r = i + z[i] - 1
+            r = i + z[i]
 
     return z
 
@@ -43,4 +43,4 @@ def kmp(line, s):
     return ans
 
 
-print(kmp("abcvmdfsomfvabsnfidnvf", "abs"))
+print(kmp("abcabs", "abs"))
