@@ -8,17 +8,3 @@ def fib(n):
 
 
 print(fib(6))
-
-"""
-Динамическое программирование
-"""
-
-
-def fib(n):
-    a = [1] * 2
-    for i in range(2, n + 1):
-        a.append(a[i - 2] + a[i - 1])
-    return a[n]
-
-
-print(fib(6))
