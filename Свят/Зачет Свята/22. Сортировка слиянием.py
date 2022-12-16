@@ -30,3 +30,7 @@ def func(a):
 
 a = list(map(int, input().split()))
 print(func(a))
+
+"""
+Временная сложность алгоритма - O(nlogn).
+"""
