@@ -24,21 +24,27 @@ def z1(s):
 
 print(z1(list(input())))
 
-"""
+""" 
 Временная сложность алгоритма - O(n**2)
 """
 
 
 def z2(s):
-    z = [0] * len(s)
+    z = [0]*len(s)
     l = 0
+    r = 0
     for i in range(1, len(s)):
-        z[i] = min(z[i - l], l + z[l] - 1)
-        z[i] = max(z[i], 0)
-        while i + z[i] < len(s) and s[i + z[i]] == s[z[i]]:
+        print(z,l,r)
+        if i <= r:
+            z[i] = min(r - i + 1, z[i - l])
+
+        while i + z[i] < len(s) and s[z[i]] == s[z[i] + i]:
             z[i] += 1
-        if i + z[i] > l + z[l]:
+
+        if i + z[i] > r:
             l = i
+            r = i + z[i] - 1
+
     return z
 
 

@@ -2,8 +2,6 @@ def func(a):
     res = []
     stack = []
     for i in range(len(a)):
-        print(stack)
-        print(res)
         if a[i] in "(/*":
             stack.append(a[i])
         elif a[i] == ")":
@@ -30,4 +28,4 @@ def func(a):
 
 
 a = input().split()
-print(func(a))
+print(*func(a))
