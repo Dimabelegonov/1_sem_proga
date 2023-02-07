@@ -12,3 +12,6 @@ def z(s):
 s=input()
 s=s+s[::-1]
 z(s)
+
+f=open(123123.txt)
+a=f.
