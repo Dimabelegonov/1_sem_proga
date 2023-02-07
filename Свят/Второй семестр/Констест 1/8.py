@@ -5,7 +5,6 @@ def func(N, a):
             arr[i] = abs(a[i] - a[i - 1])
         else:
             arr[i] = min(arr[i - 1] + abs(a[i] - a[i - 1]), arr[i - 2] + 3 * abs(a[i] - a[i - 2]))
-    print(arr)
     return arr[-1]
 
 
